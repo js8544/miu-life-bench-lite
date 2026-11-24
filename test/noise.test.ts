@@ -1,12 +1,12 @@
 // 自测：通讯、办公、系统三个噪声模块。node test/noise.test.ts
 import assert from "node:assert/strict";
-import { addMin, createWorld } from "../src/core.ts";
-import { GOLDEN_MESSAGES, HOME, NOW, PERSONA, POIS, SEED, TRIP } from "../src/facts.ts";
-import { im, oid, XBAN } from "../src/mcp/im.ts";
-import { work, WBAN, WFTIME } from "../src/mcp/work.ts";
-import { phone, NOISE_END, SBAN } from "../src/mcp/sys.ts";
-import { buildWorld } from "../src/world.ts";
-import { injectMessage } from "../src/mcp/inject.ts";
+import { addMin, createWorld } from "../core/core.ts";
+import { GOLDEN_MESSAGES, HOME, NOW, PERSONA, POIS, SEED, TRIP } from "../world/facts.ts";
+import { im, oid, XBAN } from "../apps/im.ts";
+import { work, WBAN, WFTIME } from "../apps/work.ts";
+import { phone, NOISE_END, SBAN } from "../apps/sys.ts";
+import { buildWorld } from "../core/build-world.ts";
+import { injectMessage } from "../apps/inject.ts";
 
 const mk = (seed = SEED) => createWorld({ seed, start: NOW, modules: [im, work, phone] });
 const ok = (w: ReturnType<typeof mk>, name: string, p: any = {}) => {

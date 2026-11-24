@@ -1,9 +1,9 @@
 import assert from "node:assert/strict";
-import { createWorld } from "../src/core.ts";
-import type { World } from "../src/core.ts";
-import { NOW, SEED } from "../src/facts.ts";
-import shiguang, { SG } from "../src/mcp/ext/shiguang.ts";
-import baichuan, { BRANDS, GOLD } from "../src/mcp/ext/baichuan.ts";
+import { createWorld } from "../core/core.ts";
+import type { World } from "../core/core.ts";
+import { NOW, SEED } from "../world/facts.ts";
+import shiguang, { SG } from "../apps/ext/shiguang.ts";
+import baichuan, { BRANDS, GOLD } from "../apps/ext/baichuan.ts";
 
 const mk = (seed = SEED) => createWorld({ seed, start: NOW, modules: [shiguang] });
 const ok = (w: World, name: string, p: any = {}) => {

@@ -1,10 +1,10 @@
 // 自测：民生通。node test/minshengtong.test.ts
 import assert from "node:assert/strict";
-import { createWorld } from "../src/core.ts";
-import type { World } from "../src/core.ts";
-import { NOW, SEED } from "../src/facts.ts";
-import { phone } from "../src/mcp/sys.ts";
-import mst, { SESSION_MIN, LOCK_MIN, CODE_MIN } from "../src/mcp/ext/minshengtong.ts";
+import { createWorld } from "../core/core.ts";
+import type { World } from "../core/core.ts";
+import { NOW, SEED } from "../world/facts.ts";
+import { phone } from "../apps/sys.ts";
+import mst, { SESSION_MIN, LOCK_MIN, CODE_MIN } from "../apps/ext/minshengtong.ts";
 
 const A = "minshengtong";
 const mk = (seed = SEED, withPhone = true) => createWorld({ seed, start: NOW, modules: withPhone ? [phone, mst] : [mst] });

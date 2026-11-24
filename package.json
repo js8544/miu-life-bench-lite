@@ -6,7 +6,7 @@
   "type": "module",
   "engines": { "node": ">=24" },
   "scripts": {
-    "test": "PA_NO_JUDGE=1 node --test test/*.test.ts",
-    "cases": "node src/cli.ts cases"
+    "test": "PA_NO_JUDGE=1 node --test test/*.test.ts cases/*/test.ts",
+    "cases": "node core/cli.ts cases"
   }
 }

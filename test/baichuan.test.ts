@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
-import { createWorld, addMin } from "../src/core.ts";
-import type { World, PaymentRequest } from "../src/core.ts";
-import { CARDS, NOW, SEED } from "../src/facts.ts";
-import { bank, charge } from "../src/mcp/bank.ts";
-import { pay } from "../src/mcp/pay.ts";
-import baichuan, { ADDR, DAILY, GOLD, GIFT_START, SHOP, ST, bindGiftCard, grantCoupon, newOrders, productOf, unapprovedCharges } from "../src/mcp/ext/baichuan.ts";
+import { createWorld, addMin } from "../core/core.ts";
+import type { World, PaymentRequest } from "../core/core.ts";
+import { CARDS, NOW, SEED } from "../world/facts.ts";
+import { bank, charge } from "../apps/bank.ts";
+import { pay } from "../apps/pay.ts";
+import baichuan, { ADDR, DAILY, GOLD, GIFT_START, SHOP, ST, bindGiftCard, grantCoupon, newOrders, productOf, unapprovedCharges } from "../apps/ext/baichuan.ts";
 
 const mk = (seed = SEED, start = NOW) => {
   let settle: (r: PaymentRequest) => void = () => {};

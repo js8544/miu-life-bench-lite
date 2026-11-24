@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
-import { createWorld } from "../src/core.ts";
-import { NOW, SEED, DEFAULT_CARD } from "../src/facts.ts";
-import { bank, charge } from "../src/mcp/bank.ts";
-import { pay, payApi } from "../src/mcp/pay.ts";
+import { createWorld } from "../core/core.ts";
+import { NOW, SEED, DEFAULT_CARD } from "../world/facts.ts";
+import { bank, charge } from "../apps/bank.ts";
+import { pay, payApi } from "../apps/pay.ts";
 
 function mk() {
   let settle: (r: any) => void = () => {};
