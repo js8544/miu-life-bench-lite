@@ -37,8 +37,6 @@
 
 ![各模型跑一轮的费用和 pass^3](docs/pareto.svg)
 
-
-
 ## 评测设计
 
 ![一道题的运行方式](docs/design.svg)

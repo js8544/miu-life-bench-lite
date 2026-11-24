@@ -39,8 +39,6 @@ Write-up: <https://miulab.ai/lifebench/>
 
 ![Cost per round against pass^3 for each model](docs/pareto.svg)
 
-
-
 ## Evaluation design
 
 ![How a task runs](docs/design.en.svg)
