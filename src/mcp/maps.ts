@@ -17,7 +17,7 @@ export interface MapPoi extends Poi {
   parent?: string;
   /** 0..1，相关度相同时的次序 */
   pop: number;
-  /** 店铺、餐厅等营业场所的补充信息（只有手写的扩展数据才有） */
+  /** 店铺、餐厅等营业场所的补充信息（只有手写的场所才有） */
   shop?: ShopInfo;
   /** 一段介绍文字 */
   intro?: string;
@@ -194,8 +194,8 @@ const SUFFIX = {
 const CHAINS: [string, keyof typeof TYPE][] = [["老巷砂锅粥", "food"], ["椒语川菜", "food"], ["阿嬷茶餐厅", "food"], ["禾木日料", "food"], ["江南灶", "food"], ["渔火烤鱼", "food"], ["北疆羊肉馆", "food"], ["一碗好面", "food"], ["粤小馆", "food"], ["山野云南菜", "food"], ["兰亭小笼", "food"], ["炭吉烧肉", "food"], ["谷雨轻食", "food"], ["潮味大排档", "food"], ["麦田咖啡", "cafe"], ["青柠越南粉", "food"], ["半日闲咖啡", "cafe"]];
 const GENERATED_PER_CITY = 150;
 
-// ---------- 手写的扩展数据（ID 以 B0HZ9 开头）：澄湖购物村、城东火车站、潮粤荟 ----------
-/** 扩展 POI：不参与随机生成，也不进入打车历史 */
+// ---------- 手写的场所（ID 以 B0HZ9 开头）：澄湖购物村及其店铺、城东火车站、潮粤荟 ----------
+/** 手写场所的 POI：不参与随机生成，也不出现在打车历史订单里 */
 export const isExtPoi = (p: { poi_id: string }) => p.poi_id.startsWith("B0HZ9");
 export const VILLAGE = "B0HZ90000";
 /** 购物村游客主入口（南门） */

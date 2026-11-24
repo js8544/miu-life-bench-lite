@@ -87,7 +87,7 @@ function score(run: RunView): Item[] {
 
 const c: CaseDef = {
   id: "b12",
-  title: "买菜（照常买）",
+  title: "买菜",
   group: "B",
   start: `${TODAY} 15:40`,
   user: "今晚做饭，菜照常买",

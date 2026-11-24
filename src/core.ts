@@ -1,4 +1,4 @@
-// 世界内核：时钟、随机数、ID、状态、付款请求、工具注册。各 MCP 模块只依赖这个文件、types.ts 和 facts.ts。
+// 世界内核：时钟、随机数、ID、状态、付款请求、工具注册。各 MCP 模块只依赖这个文件和 facts.ts。
 // 一切确定：同一个种子、同一串调用，结果完全相同。不要用 Math.random() 和 Date.now()。
 
 export class ToolError extends Error {

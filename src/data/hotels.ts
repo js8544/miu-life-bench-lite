@@ -273,7 +273,7 @@ function proceduralSpecs(seed: number, city: string, fixed: Spec[]): Spec[] {
   return specs;
 }
 
-// ---------- 杭州：追加在程序生成的 30 家之后的手写酒店（不影响已有酒店的编号和内容）----------
+// ---------- 杭州：手写的两家万禾酒店，排在程序生成的酒店之后 ----------
 /** 酒店、房型上的补充说明（详情页设施、房型描述用），不属于 facts.ts 里的公共类型 */
 export type HotelX = Hotel & { facility_notes?: string[] };
 export type RoomX = Room & { desc?: string };

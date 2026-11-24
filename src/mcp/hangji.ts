@@ -5,7 +5,7 @@ import { AIRLINES, SEED } from "../facts.ts";
 import { aircraftOf, airportCity, airportName, flightsOn, stopCity } from "../data/flights.ts";
 import { AIRLINE_APPS, flightDynamics } from "./airline.ts";
 
-// 旅行平台模块可能还没装：有就读它导出的机票订单，没有就跳过
+// 旅行平台模块是可选的：装了就读它导出的机票订单，没装就跳过
 let yuntuFlightOrders: ((ctx: Ctx) => any[]) | null = null;
 try {
   const m: any = await import("./yuntu.ts");
