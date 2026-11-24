@@ -1,0 +1,9 @@
+{
+  "llm": "openai",
+  "baseUrl": "https://api.openai.com/v1",
+  "apiKeyEnv": "OPENAI_API_KEY",
+  "effort": "low",
+  "parallel": 6,
+  "judge": "gpt-6.2-sol",
+  "sim": "gpt-6.2-sol"
+}

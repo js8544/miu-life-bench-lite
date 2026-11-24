@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+# 本机的模型通道配置
+pa.config.json
+# 跑出来的结果和工作目录
+results/
+work/
