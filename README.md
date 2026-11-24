@@ -37,9 +37,7 @@
 
 ![各模型跑一轮的费用和 pass^3](docs/pareto.svg)
 
-![各类失分次数](docs/abilities.svg)
 
-![各模型每轮在“分寸”一项的平均出错次数](docs/asking.svg)
 
 ## 评测设计
 
